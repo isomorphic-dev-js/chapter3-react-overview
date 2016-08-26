@@ -1,12 +1,13 @@
 import React from 'react';
+import classnames from 'classnames';
 
 class Tabs extends React.Component {
   render() {
     return (
       <div className="tabs">
-        <Tab {...this.props} name="All" index="0"/>
-        <Tab {...this.props} name="Current" index="1"/>
-        <Tab {...this.props} name="Done" index="2"/>
+        <Tab {...this.props} name="All" index="0" active={this.props.activeTab == 0}/>
+        <Tab {...this.props} name="Current" index="1" active={this.props.activeTab == 1}/>
+        <Tab {...this.props} name="Done" index="2" active={this.props.activeTab == 2}/>
       </div>
     )
   }
@@ -26,8 +27,11 @@ export class Tab extends React.Component {
   }
 
   render() {
+    console.log(this.props)
+    let classes = classnames({active: this.props.active}, 'tab')
+
     return (
-      <div className="tab"
+      <div className={classes}
         onClick={this.handleClick}>
         {this.props.name}
       </div>

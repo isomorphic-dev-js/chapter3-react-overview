@@ -9,7 +9,6 @@ class Item extends React.Component {
   }
 
   delete() {
-    console.log("Delete", this.props.actions)
     this.props.actions.delete(this.props.id)
   }
 
@@ -22,7 +21,7 @@ class Item extends React.Component {
       <div>
         <div>{this.props.name}</div>
         <button onClick={this.delete}>Delete</button>
-        <button onClick={this.complete}>Complete</button>
+        {this.props.done ? "" : <button onClick={this.complete}>Complete</button>}
       </div>
     )
   }

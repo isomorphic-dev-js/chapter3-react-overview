@@ -4,27 +4,41 @@ import ToDo from '../../todo/todo.jsx';
 
 let todos = [
   {
-    name: "Test Todo1",
-    done: true
+    name: "Finish the dishes",
+    done: true,
+    id: 0
   },
   {
-    name: "Test Todo2",
-    done: false
+    name: "Walk the dog",
+    done: false,
+    id: 1
   },
   {
-    name: "Test Todo3",
-    done: false
+    name: "Get a haricut",
+    done: true,
+    id: 2
+  },
+  {
+    name: "Work on Chapter 3",
+    done: false,
+    id: 3
   }
 ]
 
-let addToDo = () => {
-  todos.push({
-    name: "test",
-    done: false
-  })
+let actions = {
+  updateTabView: action('updateTabView'),
+  delete: action('delete'),
+  complete: action('complete'),
+  add: action('add')
 }
 
 storiesOf('ToDo app', module)
-  .add('full example', () => (
-    <ToDo todos={todos} actions={{updateTabView: action('updateTabView'), delete: action('delete'), complete: action('complete')}}/>
+  .add('all', () => (
+    <ToDo todos={todos} activeTab="0" actions={actions} />
+  ))
+  .add('current', () => (
+    <ToDo todos={todos} activeTab="1" actions={actions} />
+  ))
+  .add('done', () => (
+    <ToDo todos={todos} activeTab="2" actions={actions} />
   ));

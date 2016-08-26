@@ -5,8 +5,8 @@ class List extends React.Component {
 
   render() {
     let listItems = [];
-    this.props.data.forEach((item, index)=>{
-      listItems.push(<Item key={item.name+index} name={item.name} {...this.props}/>);
+    this.props.data.forEach((item)=>{
+      listItems.push(<Item key={item.id} {...item} {...this.props}/>);
     });
 
     return <div>{listItems}</div>

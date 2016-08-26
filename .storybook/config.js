@@ -1,4 +1,5 @@
 import { configure } from '@kadira/storybook';
+import styles from 'css!../components/styles.css'
 
 function loadStories() {
   require('../components/stories/Chapter_3_2_1/helloWorldStory.js');

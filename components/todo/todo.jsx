@@ -1,7 +1,7 @@
 import React from 'react';
 import List from './list.jsx';
 import Tabs from './tabs.jsx';
-require('css!./styles.css');
+import AddItem from './addItem.jsx';
 
 class ToDo extends React.Component {
 
@@ -18,17 +18,26 @@ class ToDo extends React.Component {
     })
   }
 
+  filterTodos() {
+    return this.props.todos.filter((todo) => {
+      if (this.props.activeTab == 0) {
+        return true;
+      } else if (this.props.activeTab == 1) {
+        return !todo.done;
+      } else {
+        return todo.done;
+      }
+    });
+  }
+
   render(){
     console.log(this.props)
     return (
       <div className='todo-app'>
         <h1>ToDo App</h1>
         <Tabs {...this.props}/>
-        <List {...this.props} data={this.props.todos} />
-        <div className="add">
-          <span>Description: </span><input />
-          <button onClick={this.props.addToDo}>Add a ToDo</button>
-        </div>
+        <List {...this.props} data={this.filterTodos()} />
+        <AddItem {...this.props} />
       </div>
     )
   }
