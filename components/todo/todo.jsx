@@ -31,11 +31,11 @@ class ToDo extends React.Component {
   }
 
   render(){
-    console.log(this.props)
+    let actions = {updateTabView: updateTabView}
     return (
       <div className='todo-app'>
         <h1>ToDo App</h1>
-        <Tabs {...this.props}/>
+        <Tabs {...this.props} actions={actions}/>
         <List {...this.props} data={this.filterTodos()} />
         <AddItem {...this.props} />
       </div>
