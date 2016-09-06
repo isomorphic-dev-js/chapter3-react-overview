@@ -10,6 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "@kadira/storybook": "^2.3.0"
+    "@kadira/storybook": "^2.3.0",
+    "css-loader": "^0.25.0",
+    "style-loader": "^0.13.1"
   },
   "dependencies": {
     "react": "^15.3.1",
