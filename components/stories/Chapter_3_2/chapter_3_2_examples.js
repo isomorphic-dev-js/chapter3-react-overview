@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import Link from '../../Chapter_3_2/link.jsx';
-import ItemFunctional from '../../Chapter_3_2/itemFunctional.jsx';
+import ListItemFunctional from '../../Chapter_3_2/listItemFunctional.jsx';
 import ButtonBasic from '../../Chapter_3_2/buttonBasic.jsx';
 
 storiesOf('Chapter 3.2 examples', module)
@@ -14,7 +14,7 @@ storiesOf('Chapter 3.2 examples', module)
         target="_blank"/>
   ))
   .add('todo item functional', () => (
-    <ItemFunctional completeCallback={action('complete')}
+    <ListItemFunctional completeCallback={action('complete')}
                    deleteCallback={action('delete')}
                    name="My first todo item"/>
   ));
