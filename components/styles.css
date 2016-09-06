@@ -1,7 +1,160 @@
-.test {
-  background-color: red;
+.todo-app {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
-  background-color: green;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Make `a` like a button */
+[role="button"] {
+    color: inherit;
+    cursor: default;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    white-space: pre;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+
+/* Demo */
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background-color: #f0f0f0;
+    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25em;
+    height: 1.5em;
+    line-height: 1.5;
+    margin: 0.25em;
+    padding: 0 1em;
+    width: 10em;
+}
+
+/*Tab Items*/
+.tab {
+  border: 1px rgba(50,50,50,.2) solid;
+  border-bottom: none;
+  box-sizing: border-box;
+  color: rgb(25,25,25);
+  float: left;
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100px;
+  margin-right: -1px;
+}
+
+.active.tab {
+  background-color: rgb(180,180,180);
+}
+
+.list {
+  border: 1px rgba(50,50,50,.2) solid;
+  display: inline-block;
+  clear: both;
+  float: left;
+  margin-top: -1px;
+  padding-right: 20px;
+  width: 60%;
+}
+
+.list-item {
+  display: block;
+  font-size: 1.2em;
+  height: 2em;
+  line-height: 2em;
+  padding: 10px;
+  width: 100%;
+}
+
+.list-item:nth-child(even) {
+  background-color: rgb(220,220,220);
+}
+
+.list-item:nth-child(odd) {
+  background-color: rgb(180,180,180);
+}
+
+.list-item div {
+  float: left;
+}
+
+.list-item > button {
+  float: right;
+}
+
+.add-item {
+  background-color: rgb(220,220,220);
+  float: right;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 35%;
+}
+
+.form-input {
+  margin-bottom: 20px;
+}
+
+.form-input input {
+  margin-left: 5px;
+  width: 70%;
+}
+
+.form-input button {
+  float: right;
+}
+
+.show-react-component-boundaries {
+  border: 2px black dotted;
+  padding: 5px;
 }
