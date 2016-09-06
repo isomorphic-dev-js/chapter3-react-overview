@@ -10,9 +10,11 @@ class ToDo extends React.Component {
     this.state = {
       tab: 0
     }
+    this.updateTabView = this.updateTabView.bind(this);
   }
 
   updateTabView(index) {
+    console.log('updateTabView', index)
     this.setState({
       tab: index
     })
@@ -20,9 +22,9 @@ class ToDo extends React.Component {
 
   filterTodos() {
     return this.props.todos.filter((todo) => {
-      if (this.props.activeTab == 0) {
+      if (this.state.tab == 0) {
         return true;
-      } else if (this.props.activeTab == 1) {
+      } else if (this.state.tab == 1) {
         return !todo.done;
       } else {
         return todo.done;
@@ -31,13 +33,14 @@ class ToDo extends React.Component {
   }
 
   render(){
-    let actions = {updateTabView: updateTabView}
+    let actions = this.props.actions || {};
+    actions.updateTabView = this.updateTabView;
     return (
       <div className='todo-app'>
-        <h1>ToDo App</h1>
-        <Tabs {...this.props} actions={actions}/>
-        <List {...this.props} data={this.filterTodos()} />
-        <AddItem {...this.props} />
+        <h1>Todo App</h1>
+        <Tabs activeTab={this.state.tab} actions={actions}/>
+        <List actions={actions} data={this.filterTodos()} />
+        <AddItem actions={actions} />
       </div>
     )
   }

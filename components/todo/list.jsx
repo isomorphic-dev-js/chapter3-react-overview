@@ -9,7 +9,7 @@ class List extends React.Component {
       listItems.push(<Item key={item.id} {...item} {...this.props}/>);
     });
 
-    return <div>{listItems}</div>
+    return <div className="list">{listItems}</div>
   }
 }
 

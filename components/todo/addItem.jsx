@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './button.jsx';
 
 class Tabs extends React.Component {
 
@@ -14,8 +15,11 @@ class Tabs extends React.Component {
   render() {
     return (
       <div className="add-item">
-        <span>Description: </span><input ref="description" />
-        <button onClick={this.add}>Create New</button>
+        <h2>Add todo:</h2>
+        <div className="form-input">
+          <span>Description: </span><input ref="description" />
+        </div>
+        <Button clickHandler={this.add}>Create New</Button>
       </div>
     )
   }

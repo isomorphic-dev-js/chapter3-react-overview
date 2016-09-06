@@ -26,19 +26,12 @@ let todos = [
 ]
 
 let actions = {
-  updateTabView: action('updateTabView'),
   delete: action('delete'),
   complete: action('complete'),
   add: action('add')
 }
 
 storiesOf('ToDo app', module)
-  .add('all', () => (
-    <ToDo todos={todos} activeTab="0" actions={actions} />
+  .add('final version', () => (
+    <ToDo todos={todos} actions={actions} />
   ))
-  .add('current', () => (
-    <ToDo todos={todos} activeTab="1" actions={actions} />
-  ))
-  .add('done', () => (
-    <ToDo todos={todos} activeTab="2" actions={actions} />
-  ));

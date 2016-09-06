@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './button.jsx';
 
 class Item extends React.Component {
 
@@ -9,6 +10,7 @@ class Item extends React.Component {
   }
 
   delete() {
+    console.log("this.props.actions", this.props.actions)
     this.props.actions.delete(this.props.id)
   }
 
@@ -18,10 +20,10 @@ class Item extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="list-item">
         <div>{this.props.name}</div>
-        <button onClick={this.delete}>Delete</button>
-        {this.props.done ? "" : <button onClick={this.complete}>Complete</button>}
+        <Button clickHandler={this.delete}>Delete</Button>
+        {this.props.done ? "" : <Button clickHandler={this.complete}>Complete</Button>}
       </div>
     )
   }
