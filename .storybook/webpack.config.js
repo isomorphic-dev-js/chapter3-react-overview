@@ -5,9 +5,8 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.css?$/,
-        loaders: [ 'style', 'raw' ],
-        include: __dirname
+        test: /\.(scss|css)$/,
+        loaders: ['style', 'css']
       }
     ]
   }
