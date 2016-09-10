@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../button.jsx'
+import Button from '../Chapter_3_2/button.jsx'
 
 class AddItemLifecycle extends React.Component {
 

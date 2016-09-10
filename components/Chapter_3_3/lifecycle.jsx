@@ -34,7 +34,7 @@ class Lifecycle extends React.Component {
       <div className="lifecycle">
         {this.state.showChild ? <AddItemLifecycle {...this.props} testUpdateProp={this.state.testUpdateProp}/> : ""}
         <Button clickHandler={this.updateChildVisibility} label="Toggle"/>
-        {this.state.showChild ? <Button clickHandler={this.updateProps} label="Test Update Prop"/> : ""}
+        {this.state.showChild ? <Button clickHandler={this.updateProps} label="Test Update Props"/> : ""}
       </div>
     );
   }
