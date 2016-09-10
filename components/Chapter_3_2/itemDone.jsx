@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Item(props) {
+const ItemDone = (props) => {
   let completeButton = "";
   if (!props.done) {
     completeButton = <button onClick={props.completeCallback}>Complete</button>
@@ -13,4 +13,4 @@ function Item(props) {
   )
 }
 
-export default ItemFunctional;
+export default ItemDone;

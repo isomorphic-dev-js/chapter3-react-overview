@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import ToDo from '../../todo/todo.jsx';
+import ToDo from '../todo/todo.jsx';
 
 let todos = [
   {

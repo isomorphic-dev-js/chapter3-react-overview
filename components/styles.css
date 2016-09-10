@@ -141,6 +141,15 @@ button {
   width: 35%;
 }
 
+.lifecycle .add-item {
+  float: left;
+}
+
+.lifecycle .btn {
+  clear: both;
+  float: left;
+}
+
 .form-input {
   margin-bottom: 20px;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './button.jsx';
 
-class Tabs extends React.Component {
+class AddItem extends React.Component {
 
   constructor(props) {
     super(props);
@@ -25,4 +25,4 @@ class Tabs extends React.Component {
   }
 }
 
-export default Tabs;
+export default AddItem;

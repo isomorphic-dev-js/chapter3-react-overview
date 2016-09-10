@@ -1,10 +1,10 @@
 import React from 'react';
-import Item from './item.jsx'
+import Item from './itemDone.jsx'
 
-let List = () => {
+let List = (props) => {
   let listItems = [];
-  this.props.data.forEach((item)=>{
-    listItems.push(<Item key={item.id} {...item} {...this.props}/>);
+  props.data.forEach((item)=>{
+    listItems.push(<Item key={item.id} {...item} actions={props.actions}/>);
   });
 
   return <div>{listItems}</div>

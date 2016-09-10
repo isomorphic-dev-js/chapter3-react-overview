@@ -5,8 +5,8 @@ let ListItemFunctional = (props) => {
   return (
     <div>
       <div>{props.name}</div>
-      <Button clickHandler={props.deleteCallback} label='Delete'></Button>
-      <Button clickHandler={props.completeCallback} label='Complete'></Button>
+      <Button key='Delete' clickHandler={props.deleteCallback} label='Delete'></Button>
+      <Button key='Complete' clickHandler={props.completeCallback} label='Complete'></Button>
     </div>
   )
 }
