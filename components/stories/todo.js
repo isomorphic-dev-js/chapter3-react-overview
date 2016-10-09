@@ -14,7 +14,7 @@ let todos = [
     id: 1
   },
   {
-    name: "Get a haricut",
+    name: "Get a haircut",
     done: true,
     id: 2
   },

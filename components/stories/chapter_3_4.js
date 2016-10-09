@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import Link from '../Chapter_3_2/link.jsx';
-import ListItemFunctional from '../Chapter_3_2/listItemFunctional.jsx';
-import ButtonBasic from '../Chapter_3_2/buttonBasic.jsx';
-import List from '../Chapter_3_2/list.jsx';
+import Link from '../Chapter_3_4/link.jsx';
+import ListItemFunctional from '../Chapter_3_4/listItemFunctional.jsx';
+import ButtonBasic from '../Chapter_3_4/buttonBasic.jsx';
+import List from '../Chapter_3_4/list.jsx';
 
 
 let todos = [
@@ -18,7 +18,7 @@ let todos = [
     id: 1
   },
   {
-    name: "Get a haricut",
+    name: "Get a haircut",
     done: true,
     id: 2
   },
@@ -35,7 +35,7 @@ let actions = {
   add: action('add')
 }
 
-storiesOf('Chapter 3.2 examples', module)
+storiesOf('Chapter 3.4 examples', module)
   .add('JSX basic button', () => (
     <ButtonBasic/>
   ))

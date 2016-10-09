@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>React render example</title>
+    <script src="https://npmcdn.com/react@15.3.1/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js"></script>
+    <style>
+      button {
+        width: 200;
+        height: 40;
+        background-color: #333;
+        border: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="render-react-into-me"></div>
+    <script type="text/javascript">
+      ReactDOM.render(
+        React.createElement("div", null,
+          React.createElement("button", null, "My First Button")
+        ),
+        document.getElementById('render-react-into-me')
+      );
+    </script>
+  </body>
+</html>
