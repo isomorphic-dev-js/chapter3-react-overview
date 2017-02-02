@@ -8,6 +8,7 @@ const ItemDone = (props) => {
   return (
     <div>
       <div>{props.name}</div>
+      {completeButton}
       <button onClick={props.deleteCallback}>Delete</button>
     </div>
   )

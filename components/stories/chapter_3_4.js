@@ -41,7 +41,7 @@ storiesOf('Chapter 3.4 examples', module)
   ))
   .add('link displays with props', () => (
     <Link displayName="My first link"
-        url="http://google.com"
+        link="http://google.com"
         target="_blank"/>
   ))
   .add('list item functional', () => (
