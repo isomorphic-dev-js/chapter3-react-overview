@@ -3,7 +3,7 @@ import List from './list.jsx';
 import Tabs from './tabs.jsx';
 import AddItem from './addItem.jsx';
 
-class ToDo extends React.Component {
+class Todo extends React.Component {
 
   constructor(props) {
     super(props);
@@ -46,4 +46,4 @@ class ToDo extends React.Component {
   }
 }
 
-export default ToDo;
+export default Todo;
