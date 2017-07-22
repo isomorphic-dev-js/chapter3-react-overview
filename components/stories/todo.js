@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import ToDo from '../todo/todo.jsx';
+import Todo from '../todo/todo.jsx';
 
 let todos = [
   {
@@ -26,7 +26,7 @@ let todos = [
 ]
 
 let actions = {
-  delete: action('delete'),
+  delete: action('deleteTodo'),
   complete: action('complete'),
   add: action('add')
 }

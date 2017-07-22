@@ -30,7 +30,7 @@ let todos = [
 ]
 
 let actions = {
-  delete: action('delete'),
+  delete: action('deleteTodo'),
   complete: action('complete'),
   add: action('add')
 }
@@ -45,8 +45,8 @@ storiesOf('Chapter 3.4 examples', module)
         target="_blank"/>
   ))
   .add('list item functional', () => (
-    <ListItemFunctional completeCallback={action('complete')}
-                   deleteCallback={action('delete')}
+    <ListItemFunctional completeCallback={actions.complete}
+                   deleteCallback={actions.delete}
                    name="My first todo item"/>
   ))
   .add('list container with list item', () =>(

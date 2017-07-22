@@ -9,13 +9,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@kadira/storybook": "^2.3.0",
-    "css-loader": "^0.25.0",
-    "style-loader": "^0.13.1"
+    "@kadira/storybook": "^2.35.3",
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2"
   },
   "dependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-router": "^2.7.0"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router": "^3.0.5"
   }
 }
