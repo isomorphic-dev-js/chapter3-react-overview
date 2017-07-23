@@ -1,5 +1,4 @@
 import React from 'react';
-import classnames from 'classnames';
 
 class Tabs extends React.Component {
   render() {
@@ -14,26 +13,3 @@ class Tabs extends React.Component {
 }
 
 export default Tabs;
-
-
-export class Tab extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.props.actions.updateTabView(this.props.index)
-  }
-
-  render() {
-    let classes = classnames({active: this.props.active}, 'tab')
-
-    return (
-      <div className={classes}
-        onClick={this.handleClick}>
-        {this.props.name}
-      </div>
-    )
-  }
-}
