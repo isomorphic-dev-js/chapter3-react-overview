@@ -13,3 +13,10 @@ class Tabs extends React.Component {
 }
 
 export default Tabs;
+
+const Tab = () => {
+  return null;
+}
+
+export default Tab;
+
