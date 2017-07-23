@@ -33,5 +33,5 @@ let actions = {
 
 storiesOf('ToDo app', module)
   .add('final version', () => (
-    <ToDo todos={todos} actions={actions} />
+    <Todo todos={todos} actions={actions} />
   ))
