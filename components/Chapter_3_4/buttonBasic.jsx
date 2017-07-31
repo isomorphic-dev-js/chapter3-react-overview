@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Button = (props) => {
-  let label = "Click Me!";
-  return <button>{label}</button>;
+let ButtonBasic = (props) => {
+  return null
 }
 
-export default Button;
+export default ButtonBasic;
