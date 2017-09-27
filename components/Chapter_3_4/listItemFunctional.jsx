@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './button.jsx';
 
-let ListItemFunctional = (props) => {
+const ListItemFunctional = (props) => {
   return (
     <div>
       <div>{props.name}</div>
