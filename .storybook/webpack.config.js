@@ -3,7 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.(scss|css)$/,
         loaders: ['style', 'css']
