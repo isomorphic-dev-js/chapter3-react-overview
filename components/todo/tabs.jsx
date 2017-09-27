@@ -27,7 +27,7 @@ export class Tab extends React.Component {
   }
 
   render() {
-    let classes = classnames({active: this.props.active}, 'tab')
+    const classes = classnames({active: this.props.active}, 'tab')
 
     return (
       <div className={classes}
